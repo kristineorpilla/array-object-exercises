@@ -6,9 +6,12 @@ function hello (name) {
 }
 console.log(hello(myPenguin.name));
 //3
-myPenguin.canFly = "false";
+var myPenguin = {canFly = "false"};
 //4
-var myPenguin = {chirp: "CHIRP CHIRP! Is this what penguins sound like?"}
-console.log(myPenguin.chirp);
+myPenguin.chirp = function() {
+	return "CHIRP CHIRP! Is this what penguins sound like?"
+};
 //5
-var myPenguin = {}
+myPenguin.sayHello = function() {
+	return hello 
+}
