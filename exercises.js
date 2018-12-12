@@ -3,30 +3,36 @@ var myPenguin = {name: "Pablo", origin: "The Backyardigans"};
 //2
 function hello (name) {
   return "Hello, I'm a penguin and my name is " + name + "!";
-}
+};
 console.log(hello(myPenguin.name));
 //3
-var myPenguin = {canFly: "false"};
+myPenguin.canFly = false;
 //4
 myPenguin.chirp = function() {
 	return "CHIRP CHIRP! Is this what penguins sound like?"
-}
+};
 console.log(myPenguin.chirp());
 //5
-myPenguin.sayHello = function(name) {
-	return "Hello, I'm a penguin and my name is " + name + "!"; 
-}
+myPenguin.sayHello = function() {
+	return "Hello, I'm a penguin and my name is " + this.name + "!"; 
+};
 //6
-console.log(myPenguin.sayHello("Bob"));
+console.log(myPenguin.sayHello());
 //7
-console.log(myPenguin.sayHello("Penguin McPenguinFace"));
+myPenguin.name = "Penguin McPenguinFace";
+console.log(myPenguin.sayHello());
 //8
 myPenguin.fly = function() {
-	if (this.canFly = "true") {
+	if (myPenguin.canFly === "true") {
 		return "I can fly!";
 	}
 	else {
 		return "No flying for me!";
 	}
-}
-console.log(myPenguin.fly(this.canFly));
+};
+//9
+console.log(myPenguin.fly(myPenguin.canFly));
+//10
+myPenguin.canFly = "true";
+//11
+console.log(myPenguin.fly(myPenguin.canFly));
