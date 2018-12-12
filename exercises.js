@@ -36,3 +36,4 @@ console.log(myPenguin.fly(myPenguin.canFly));
 myPenguin.canFly = "true";
 //11
 console.log(myPenguin.fly(myPenguin.canFly));
+//12
