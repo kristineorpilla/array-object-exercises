@@ -37,3 +37,10 @@ myPenguin.canFly = "true";
 //11
 console.log(myPenguin.fly(myPenguin.canFly));
 //12
+for (key in myPenguin) {
+	console.log(key);
+}
+//13
+for (value in myPenguin) {
+	console.log(myPenguin[value]);
+}
